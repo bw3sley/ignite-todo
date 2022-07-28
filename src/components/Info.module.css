@@ -1,0 +1,36 @@
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 6.4rem;
+}
+
+.info .created, .info .done {
+    display: flex;
+    gap: .8rem;
+}
+
+.info .created span, .info .done span {
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--gray-400);
+    color: var(--gray-200);
+
+    padding: .2rem .8rem;
+
+    border-radius: 999px;
+}
+
+.info .created strong {
+    color: var(--blue);
+}
+
+.info .done strong {
+    color: var(--purple);
+}
