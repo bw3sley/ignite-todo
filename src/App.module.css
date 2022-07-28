@@ -3,3 +3,9 @@
 
     margin: -2.7rem auto 6.4rem;
 }
+
+@media (max-width: 768px) {
+    .wrapper {
+        width: 90%;
+    }
+}

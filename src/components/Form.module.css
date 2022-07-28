@@ -1,0 +1,49 @@
+.form {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 9rem;
+    gap: .8rem;
+}
+
+.form input {
+    border: 1px solid var(--gray-700);
+    border-radius: 8px;
+
+    padding: 1.6rem;
+    
+    background-color: var(--gray-500);
+    color: var(--gray-200);
+}
+
+.form input:focus-within {
+    outline: none;
+
+    border: 1px solid var(--gray-100);
+}
+
+.form button {
+    background-color: var(--blue-dark);
+    color: var(--gray-100);
+
+    border: none;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+
+    opacity: 1;
+
+    cursor: pointer;
+
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.form button:disabled {
+    opacity: .8;
+
+    cursor: not-allowed;
+}
