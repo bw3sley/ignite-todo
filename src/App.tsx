@@ -8,13 +8,6 @@ import "./global.css";
 
 import styles from './App.module.css';
 
-const tasks = [
-  {
-    id: "1",
-    content: "Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer."
-  }
-]
-
 export function App() {
   return (
     <>
@@ -22,10 +15,6 @@ export function App() {
     
       <main className={styles.wrapper}>
         <Form />
-
-        <Info />
-
-        { tasks.length == 0 ? <EmptyContent /> : <Task /> }
       </main>
     </>
   )

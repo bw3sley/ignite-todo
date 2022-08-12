@@ -1,6 +1,6 @@
 .task {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: flex-start;
     gap: 1.2rem;
 
@@ -12,6 +12,9 @@
     padding: 1.6rem;
 
     margin-top: 2.4rem;
+
+    word-break: break-all;
+    hyphens: auto;
 }
 
 .task input {
@@ -23,7 +26,7 @@
     border-radius: 50%;
 
     width: 1.7rem;
-    height: 1.5rem;
+    height: 1.7rem;
 
     margin-top: 0.4rem;
 
