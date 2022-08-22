@@ -9,13 +9,13 @@ import { PlusCircle } from "phosphor-react";
 import styles from "./Form.module.css";
 
 export function Form() {
-    const [tasks, setTask] = useState(["Atividade exemplo"]);
+    const [tasks, setTask] = useState<string[]>([]);
     const [newTaskText, setNewTaskText] = useState("");
 
     function handleCreateNewToDo(event: FormEvent) {
         event.preventDefault();
 
-        setTask([...tasks, newTaskText]);
+        setTask((task) => [...task, newTaskText]);
         setNewTaskText("");
     }
 
@@ -64,7 +64,7 @@ export function Form() {
                 </button>
             </form>
 
-            <Info />
+            <Info taskLength={tasks.length} />
 
             { tasks.length == 0 ? <EmptyContent /> 
                 :
@@ -76,7 +76,6 @@ export function Form() {
                         onDeleteTask={deleteTask}
                     /> 
                 )
-        
             }) }
         </>
     )

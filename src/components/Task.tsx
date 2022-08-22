@@ -10,8 +10,8 @@ interface ITask {
 }
 
 export function Task({ content, onDeleteTask }: ITask) {
-    const [doneTask, setDoneTask] = useState(Boolean);
-    
+    const [doneTask, setDoneTask] = useState<true | false>(false);
+
     function handleDeleteTask() {
         onDeleteTask(content);
     }
@@ -33,18 +33,18 @@ export function Task({ content, onDeleteTask }: ITask) {
             />
 
             { doneTask === true ? 
-                <label htmlFor="task-radio">
-                    <del>{content}</del>
-                </label>
-                
-                :
-
-                <label htmlFor="task-radio">
-                    {content}
-                </label> 
+                ( 
+                    <label htmlFor="task-radio">
+                        <del>{content}</del>
+                    </label>
+                )
+                    :
+                (
+                    <label htmlFor="task-radio">
+                        {content}
+                    </label> 
+                )
             }
-
-
 
             <Trash 
                 size={24} 
