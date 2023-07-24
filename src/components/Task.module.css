@@ -1,0 +1,72 @@
+.task {
+    display: flex;
+    align-items: start;
+    gap: .75rem;
+
+    border: 1px solid var(--gray-400);
+    border-radius: 8px;
+
+    background-color: var(--gray-500);
+
+    padding: 1rem;
+}
+
+.task:has(input:checked) {
+    border: 1px solid var(--gray-500);
+}
+
+.task + .task {
+    margin-top: .75rem;
+}
+
+.task input {
+    width: 1.5rem;
+    height: 1.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    appearance: none;
+
+    border: 2px solid var(--blue);
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition: all 100ms;
+}
+
+.task input:checked {
+    background-color: var(--purple-dark);
+
+    border: 2px solid var(--purple-dark);
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24'%3E %3Cpath d='M15.88 8.29L10 14.17l-1.88-1.88a.996.996 0 1 0-1.41 1.41l2.59 2.59c.39.39 1.02.39 1.41 0L17.3 9.7a.996.996 0 0 0 0-1.41c-.39-.39-1.03-.39-1.42 0z' fill='%23fff'/%3E %3C/svg%3E");
+    background-position: center;
+}
+
+.task label {
+    font-size: .875rem;
+    line-height: 140%;
+
+    flex: 1;
+
+    color: var(--gray-100);
+}
+
+.task:has(input:checked) label {
+    text-decoration: line-through;
+
+    color: var(--gray-300);
+}
+
+.task svg {
+    cursor: pointer;
+
+    color: var(--gray-300);
+}
+
+.task svg:hover {
+    color: var(--danger);
+}

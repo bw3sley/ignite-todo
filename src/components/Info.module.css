@@ -1,0 +1,38 @@
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-block: 4rem 1.5rem;
+}
+
+.info > div {
+    display: flex;
+    gap: .5rem;
+}
+
+.tasksCreated {
+    font-weight: 700;
+    font-size: 0.875rem;
+
+    color: var(--blue);
+}
+
+.tasksCompleted {
+    font-weight: 700;
+    font-size: 0.875rem;
+
+    color: var(--purple);
+}
+
+.tasksCount {
+    background-color: var(--gray-400);
+    color: var(--gray-100);
+
+    font-weight: 700;
+    font-size: 0.75rem;
+
+    border-radius: 999px;
+
+    padding: .125rem .5rem;
+}
